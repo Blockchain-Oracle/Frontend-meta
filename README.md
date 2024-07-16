@@ -1,6 +1,3 @@
-
-
-```markdown
 # Meta Front-End Developer Professional Certificate
 
 This repository contains all the code and lessons from the [Meta Front-End Developer Professional Certificate](https://www.coursera.org/professional-certificates/meta-front-end-developer) course offered by Coursera. The course covers a comprehensive range of topics essential for front-end development, including HTML, CSS, JavaScript, React, and more.
@@ -88,4 +85,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - Thanks to Meta and Coursera for providing this comprehensive course.
 - Special thanks to all the instructors and contributors who made this course possible.
 
-```
