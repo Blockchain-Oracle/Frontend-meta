@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="Click me" onclick="msg()" />
+    <button>c1ick me</button>
+    <button onclick="alert('Are you sure you want to continue?')">
+      <img
+        src="https://yourserver.com/button_img.jpg"
+        alt="Submit the form"
+        height="64"
+        width="64"
+      />
+    </button>
+    <input type="checkbox" id="dog" name="dog" value="Dog" />
+    <label for="dog">I like dogs</label>
+    <input type="checkbox" id="cat" name="cat" value="Cat" />
+    <label for="cat">I like cats</label>
+
+    <!--n0te this has same name f0r radi0-->
+    <input type="radio" id="light" name="theme" value="Light" />
+    <label for="light">Light</label>
+    <input type="radio" id="dark" name="theme" value="Dark" />
+    <label for="dark">Dark</label>
+
+    <!--submit-->
+    <form action="myserver.com" method="POST">
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!--text-->
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname" />
+    <!--passw0rd-->
+    <label for="pwd">Password:</label>
+    <input type="password" id="pwd" name="pwd" />
+    <!--date-->
+    <label for="dob">Date of birth:</label>
+    <input type="date" id="dob" name="date of birth" />
+    <!--date 10ca1e-->
+    <label for="birthdaytime">Birthday (date and time):</label>
+    <input type="datetime-local" id="birthdaytime name="birthdaytime">
+    <!--hidden-->
+    <input type="hidden" id="custId" name="custId" value="3487" />
+    <!--image-->
+    <input
+      type="image"
+      src="submit_img.png"
+      alt="Submit"
+      width="48"
+      height="48"
+    />
+    <!--number-->
+    <input type="number" id="quantity" name="quantity" min="1" max="5" />
+    <!--range-->
+    <br />
+    <label for="volume">Volume:</label>
+    <input type="range" id="volume" name="volume" min="0" max="10" />
+
+    <!--reset-->
+    <input type="reset" />
+    <!--search-->
+    <label for="gsearch">Search in Google:</label>
+    <input type="search" id="gsearch" name="gsearch" />
+    <!--time-->
+    <label for="appt">Select a time:</label>
+    <input type="time" id="appt" name="appt" />
+    <!--te1ph0ne-->
+    <label for="phone">Enter your phone number:</label>
+    <input type="tel" id="phone" name="phone" pattern="[+]{1}[0-9]{11,14}" />
+
+    <!--ur1-->
+    <label for="homepage">Add your homepage:</label>
+    <input type="url" id="homepage" name="homepage" />
+
+    <!--week-->
+    <label for="week">Select a week:</label>
+    <input type="week" id="week" name="week" />
+
+    <!--m0nth-->
+    <label for="bdaymonth">Birthday (month and year):</label>
+    <input
+      type="month"
+      id="bdaymonth"
+      name="bdaymonth"
+      min="1930-01"
+      value="2000-01"
+    />
+
+    <label for="myfile">Select a file:</label>
+    <input type="file" id="myfile" name="myfile" />
+
+    <!--data 1ist and se1ect diffrence-->
+    <!--data 1ist-->
+    <form action="/my_action_page">
+      <label for="flowers">Favourite flower:</label><br />
+      <input list="flowers" name="flowers" />
+      <datalist id="flowers">
+        <option value="Rose"></option>
+        <option value="Lily"></option>
+        <option value="Tulip"></option>
+        <option value="Daffodil"></option>
+        <option value="Orchid"></option>
+      </datalist>
+
+      ...
+    </form>
+
+    <!--se1ect-->
+    <label for="course">Choose a course:</label><br />
+    <select id="course" name="courselist">
+      <option value="html">HTML Introduction</option>
+      <option value="css">Styling with CSS</option>
+      <option value="js">JavaScript</option>
+      <option value="react">React Basics</option>
+    </select>
+  </body>
+</html>
