@@ -1,10 +1,14 @@
-import React from "react";
 import "./App.css";
+import FeedbackForm from "./FeedbackForm";
 
 function App() {
+  const handleSubmit = () => {
+    console.log("Form submitted!");
+  };
+
   return (
-    <div>
-      <h1>Hello world</h1>
+    <div className="App">
+      <FeedbackForm onSubmit={handleSubmit} />
     </div>
   );
 }
