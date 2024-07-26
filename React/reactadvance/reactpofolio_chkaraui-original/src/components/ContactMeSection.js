@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import {
   Box,
@@ -21,43 +21,51 @@ const LandingSection = () => {
   const { isLoading, response, submit } = useSubmit();
   const { onOpen } = useAlertContext();
 
-  //note @getFiledProps contains {onBlur, onChange,value,name}
-  const { handleSubmit, errors, touched, values, getFieldProps, resetForm } =
-    useFormik({
-      initialValues: {
-        firstName: "",
-        email: "",
-        type: "hireMe",
-        comment: "",
-      },
-      onSubmit: async (values) => {
-        try {
-          await submit(values);
-          onOpen(response.type, response.message);
-          resetForm();
-        } catch (error) {
-          onOpen(response.type, response.message);
-        }
-      },
+  const {
+    handleSubmit,
+    errors,
+    touched,
+    values,
+    getFieldProps,
+    resetForm,
+    setFieldTouched,
+  } = useFormik({
+    initialValues: {
+      firstName: "",
+      email: "",
+      type: "",
+      comment: "",
+    },
+    onSubmit: async (values) => {
+      try {
+        await submit(values);
+        onOpen(response.type, response.message);
+        resetForm();
+      } catch (error) {
+        onOpen(response.type, response.message);
+      }
+    },
 
-      validationSchema: Yup.object({
-        firstName: Yup.string()
-          .min(5, "name is too short min 5")
-          .required("name is required"),
-        email: Yup.string()
-          .email("invalid email")
-          .required("email is required"),
-        comment: Yup.string()
-          .min(5, "minmum of 5 charaters")
-          .required("comment is required"),
-      }),
-    });
+
+    validationSchema: Yup.object({
+      firstName: Yup.string()
+        .min(5, "name is too short min 5")
+        .required("name is required"),
+      email: Yup.string().email("invalid email").required("email is required"),
+      comment: Yup.string()
+        .min(5, "minmum of 5 charaters")
+        .required("comment is required"),
+    }),
+  });
+
+  const handleFocus = (field) => {
+    setFieldTouched(field, false);
+  };
 
   const isFormValid = () => {
     return (
       values.firstName &&
       values.email &&
-      values.type &&
       !errors.firstName &&
       !errors.email &&
       !errors.comment
@@ -83,6 +91,7 @@ const LandingSection = () => {
                 <Input
                   id="firstName"
                   name="firstName"
+                  onFocus={() => handleFocus("firstName")}
                   {...getFieldProps("firstName")}
                 />
                 <FormErrorMessage>{errors.firstName}</FormErrorMessage>
@@ -93,6 +102,7 @@ const LandingSection = () => {
                   id="email"
                   name="email"
                   type="email"
+                  onFocus={() => handleFocus("email")}
                   {...getFieldProps("email")}
                 />
                 <FormErrorMessage>{errors.email}</FormErrorMessage>
@@ -126,6 +136,7 @@ const LandingSection = () => {
                   id="comment"
                   name="comment"
                   height={250}
+                  onFocus={() => handleFocus("comment")}
                   {...getFieldProps("comment")}
                 />
                 <FormErrorMessage>{errors.comment}</FormErrorMessage>

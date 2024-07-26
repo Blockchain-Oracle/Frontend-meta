@@ -1,10 +1,20 @@
 import React, { useReducer } from "react";
 import "./App.css";
 
+// Define action types as constants
+const BUY_INGREDIENTS = "buy_ingredients";
+const SELL_A_MEAL = "sell_a_meal";
+
+// Reducer function to handle state changes
 const reducer = (state, action) => {
-  if (action.type === "buy_ingredients") return { money: state.money - 10 };
-  if (action.type === "sell_a_meal") return { money: state.money + 10 };
-  return state;
+  switch (action.type) {
+    case BUY_INGREDIENTS:
+      return { money: state.money - 10 };
+    case SELL_A_MEAL:
+      return { money: state.money + 10 };
+    default:
+      return state;
+  }
 };
 
 function App() {
@@ -15,10 +25,10 @@ function App() {
     <div className="App">
       <h1>Wallet: ${state.money}</h1>
       <div>
-        <button onClick={() => dispatch({ type: "buy_ingredients" })}>
+        <button onClick={() => dispatch({ type: BUY_INGREDIENTS })}>
           Shopping for veggies!
         </button>
-        <button onClick={() => dispatch({ type: "sell_a_meal" })}>
+        <button onClick={() => dispatch({ type: SELL_A_MEAL })}>
           Serve a meal to the customer
         </button>
       </div>

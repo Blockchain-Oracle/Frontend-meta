@@ -22,7 +22,7 @@ function Alert() {
     <AlertDialog
       isOpen={isOpen}
       leastDestructiveRef={cancelRef}
-      onClose={onClose}
+      // onClose={onClose}
     >
       <AlertDialogOverlay>
         <AlertDialogContent

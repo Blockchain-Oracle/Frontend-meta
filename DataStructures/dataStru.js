@@ -48,6 +48,7 @@ console.log(bestBoxers.get(1));
 const repetitiveFruits = ["apple", "pear", "apple", "pear", "plum", "apple"];
 const uniqueFruits = new Set(repetitiveFruits);
 console.log(uniqueFruits);
+
 //{'apple', 'pear', 'plum'}
 
 /***

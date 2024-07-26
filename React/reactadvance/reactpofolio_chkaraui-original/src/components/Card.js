@@ -1,6 +1,5 @@
 import {
   Heading,
-  Stack,
   Image,
   Text,
   Divider,
@@ -9,6 +8,7 @@ import {
   ButtonGroup,
   Button,
   Card,
+  Stack,
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
@@ -16,7 +16,7 @@ import React from "react";
 
 const Cards = ({ title, description, imageSrc }) => {
   return (
-    <Card maxW="xs" borderRadius="md" overflow="hidden" boxShadow="md">
+    <Card maxW="md" borderRadius="md" overflow="hidden" boxShadow="md">
       <CardBody>
         <Image src={imageSrc} borderRadius="lg" />
         <Stack mt="4" spacing="6">

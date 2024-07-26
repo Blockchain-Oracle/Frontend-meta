@@ -1,62 +1,72 @@
+/* Styles for the body */
 body {
-    background-color: #E0E0E2;
+  background-color: #e0e0e2;
 }
 
+/* Styles for the unordered list */
 ul {
-    list-style-type: none;
-    text-align: center;
-    padding: 0px;
-    justify-content: flex-start;
-
+  list-style-type: none;
+  text-align: center;
+  padding: 0px;
+  justify-content: flex-start;
 }
 
+/* Styles for the list items */
 li {
-    display: inline;
-
+  display: inline;
 }
 
+/* Styles for the main content */
 main {
-    text-align: center;
+  text-align: center;
 }
 
+/* Styles for the footer */
 footer {
-    text-align: center;
+  text-align: center;
 }
 
+/* Styles for the headings */
 h1 {
-    color: #721817;
+  color: #721817;
 }
 
 h2 {
-    color: #721817;
+  color: #721817;
 }
 
+/* Styles for the centered text */
 .center-text {
-    text-align: center;
+  text-align: center;
 }
 
+/* Styles for the images */
 img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-h2>span {
-    color: #FA9F42;
-    font-size: 0.75em;
+/* Styles for the span inside h2 */
+h2 > span {
+  color: #fa9f42;
+  font-size: 0.75em;
 }
 
-form>div {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+/* Styles for the form div */
+form > div {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
+/* Styles for the copyright */
 #copyright {
-    padding-top: 12px;
-    font-size: 0.75em;
+  padding-top: 12px;
+  font-size: 0.75em;
 }
 
+/* Styles for the invalid input */
 input:focus:invalid {
-    color: red;
-    border: red 3px solid;
+  color: red;
+  border: red 3px solid;
 }

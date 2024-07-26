@@ -1,19 +1,28 @@
-<option value="1"></option>
+<!-- This is the main HTML structure -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- This is the title of the page -->
     <title>My Video Rating</title>
 
+    <!-- This is the link to the external stylesheet -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- This is the main content section -->
     <main>
+      <!-- This is the video element -->
       <video controls>
+        <!-- This is the source of the video -->
         <source src=".mp4" type="video/mp4" />
       </video>
+      <!-- This is the form section -->
       <div>
+        <!-- This is the form element -->
         <form action="">
+          <!-- This is the label for the rating input -->
           <label for="rating">Rating</label>
+          <!-- This is the range input for rating -->
           <input
             type="range"
             class="ratings"
@@ -22,13 +31,20 @@
             max="5"
             list="ratings"
           />
+          <!-- This is the datalist for rating options -->
           <datalist id="ratings">
+            <!-- This is the option for rating 1 -->
             <option value="1"></option>
+            <!-- This is the option for rating 2 -->
             <option value="2"></option>
+            <!-- This is the option for rating 3 -->
             <option value="3"></option>
+            <!-- This is the option for rating 4 -->
             <option value="4"></option>
+            <!-- This is the option for rating 5 -->
             <option value="5"></option>
           </datalist>
+          <!-- This is the submit button -->
           <button type="submit">Submit Rating</button>
         </form>
       </div>

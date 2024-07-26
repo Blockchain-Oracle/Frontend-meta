@@ -6,6 +6,7 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- Button -->
     <input type="button" value="Click me" onclick="msg()" />
     <button>c1ick me</button>
     <button onclick="alert('Are you sure you want to continue?')">
@@ -16,37 +17,40 @@
         width="64"
       />
     </button>
+
+    <!-- Checkboxes -->
     <input type="checkbox" id="dog" name="dog" value="Dog" />
     <label for="dog">I like dogs</label>
     <input type="checkbox" id="cat" name="cat" value="Cat" />
     <label for="cat">I like cats</label>
 
-    <!--n0te this has same name f0r radi0-->
+    <!-- Radio buttons -->
+    <!-- n0te this has same name f0r radi0 -->
     <input type="radio" id="light" name="theme" value="Light" />
     <label for="light">Light</label>
     <input type="radio" id="dark" name="theme" value="Dark" />
     <label for="dark">Dark</label>
 
-    <!--submit-->
+    <!-- Submit -->
     <form action="myserver.com" method="POST">
       <input type="submit" value="Submit" />
     </form>
 
-    <!--text-->
+    <!-- Text -->
     <label for="fname">First name:</label>
     <input type="text" id="fname" name="fname" />
-    <!--passw0rd-->
+    <!-- Password -->
     <label for="pwd">Password:</label>
     <input type="password" id="pwd" name="pwd" />
-    <!--date-->
+    <!-- Date -->
     <label for="dob">Date of birth:</label>
     <input type="date" id="dob" name="date of birth" />
-    <!--date 10ca1e-->
+    <!-- Date and time -->
     <label for="birthdaytime">Birthday (date and time):</label>
-    <input type="datetime-local" id="birthdaytime name="birthdaytime">
-    <!--hidden-->
+    <input type="datetime-local" id="birthdaytime" name="birthdaytime" />
+    <!-- Hidden -->
     <input type="hidden" id="custId" name="custId" value="3487" />
-    <!--image-->
+    <!-- Image -->
     <input
       type="image"
       src="submit_img.png"
@@ -54,34 +58,34 @@
       width="48"
       height="48"
     />
-    <!--number-->
+    <!-- Number -->
     <input type="number" id="quantity" name="quantity" min="1" max="5" />
-    <!--range-->
+    <!-- Range -->
     <br />
     <label for="volume">Volume:</label>
     <input type="range" id="volume" name="volume" min="0" max="10" />
 
-    <!--reset-->
+    <!-- Reset -->
     <input type="reset" />
-    <!--search-->
+    <!-- Search -->
     <label for="gsearch">Search in Google:</label>
     <input type="search" id="gsearch" name="gsearch" />
-    <!--time-->
+    <!-- Time -->
     <label for="appt">Select a time:</label>
     <input type="time" id="appt" name="appt" />
-    <!--te1ph0ne-->
+    <!-- Telephone -->
     <label for="phone">Enter your phone number:</label>
     <input type="tel" id="phone" name="phone" pattern="[+]{1}[0-9]{11,14}" />
 
-    <!--ur1-->
+    <!-- URL -->
     <label for="homepage">Add your homepage:</label>
     <input type="url" id="homepage" name="homepage" />
 
-    <!--week-->
+    <!-- Week -->
     <label for="week">Select a week:</label>
     <input type="week" id="week" name="week" />
 
-    <!--m0nth-->
+    <!-- Month -->
     <label for="bdaymonth">Birthday (month and year):</label>
     <input
       type="month"
@@ -94,8 +98,8 @@
     <label for="myfile">Select a file:</label>
     <input type="file" id="myfile" name="myfile" />
 
-    <!--data 1ist and se1ect diffrence-->
-    <!--data 1ist-->
+    <!-- Data list and select difference -->
+    <!-- Data list -->
     <form action="/my_action_page">
       <label for="flowers">Favourite flower:</label><br />
       <input list="flowers" name="flowers" />
@@ -110,7 +114,7 @@
       ...
     </form>
 
-    <!--se1ect-->
+    <!-- Select -->
     <label for="course">Choose a course:</label><br />
     <select id="course" name="courselist">
       <option value="html">HTML Introduction</option>

@@ -1,9 +1,10 @@
+import React from "react";
 import "./App.css";
 import FeedbackForm from "./FeedbackForm";
 
 function App() {
-  const handleSubmit = () => {
-    console.log("Form submitted!");
+  const handleSubmit = (props) => {
+    console.log("Form submitted!", props.score, props.comment);
   };
 
   return (
